@@ -1,7 +1,7 @@
 <div align="center">
   <h1>🤖 Agentic Next.js Monorepo Stack</h1>
-  <p>🇬🇧 A modern, AI-first Next.js monorepo template equipped with PostgreSQL, Prisma, Better-Auth, Ultracite, and native support for AI Agents (MCP, SDD, and prompt schemas).</p>
-  <p>🇪🇸 Una plantilla monorepo moderna con Next.js lista para IA, equipada con PostgreSQL, Prisma, Better-Auth, Ultracite y soporte nativo para Agentes de IA (MCP, SDD y esquemas de prompt).</p>
+  <p>🇬🇧 A modern, AI-first Next.js monorepo template equipped with PostgreSQL, Prisma, Better-Auth, Ultracite, and native support for AI Agents (MCP and Skills).</p>
+  <p>🇪🇸 Una plantilla monorepo moderna con Next.js lista para IA, equipada con PostgreSQL, Prisma, Better-Auth, Ultracite y soporte nativo para Agentes de IA (MCP and Skills).</p>
 </div>
 
 ## 🇬🇧 English
@@ -26,7 +26,6 @@ This repository is uniquely optimized for **AI Coding Assistants** (like Antigra
 - **AI Skills (`.agents/skills/`)**: Pre-configured sub-agents/skills containing explicit instructions, constraints, and operational knowledge (e.g., `architect-nextjs`, `interface-design`, `better-auth-best-practices`).
 - **`agents.md` & `gemini.md`**: Global prompting and behavior rules for AI assistants, ensuring they follow predefined team standards without repetitive prompting.
 - **MCP (Model Context Protocol)**: Seamless contextual integration for connecting AI models to external tools, editors, and environments natively.
-- **Spec-Driven Development (SDD)**: Built-in commands (`/sdd-explore`, `/sdd-apply`, `/sdd-verify`) to orchestrate complex architectural and implementation changes with AI agents cleanly.
 
 ### 📦 Setup
 
@@ -59,7 +58,6 @@ Este repositorio está optimizado al máximo para **asistentes de programación 
 - **AI Skills (`.agents/skills/`)**: Sub-agentes preparados por defecto, que proveen contexto, restricciones y conocimiento operacional (ej. `architect-nextjs`, `interface-design`, `better-auth-best-practices`).
 - **`agents.md` y `gemini.md`**: Reglas globales de comportamiento y formato para que los asistentes sigan siempre los estándares del proyecto de forma autómatica.
 - **MCP (Model Context Protocol)**: Integración contextual que permite a los modelos de inteligencia artificial hablar con el entorno de desarrollo y herramientas externas de forma controlada.
-- **Spec-Driven Development (SDD)**: Comandos integrados para delegar a la IA flujos completos de desarrollo bajo especificaciones de tu proyecto (`/sdd-explore`, `/sdd-apply`, `/sdd-verify`).
 
 ### 📦 Configuración Inicial
 
