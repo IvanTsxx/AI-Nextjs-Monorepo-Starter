@@ -346,12 +346,20 @@ async function Notifications() {
 ```tsx
 import { unstable_cache } from "next/cache";
 
-const getCachedUser = unstable_cache(async (id) => getUser(id), ["my-app-user"], {
-  tags: ["users"],
-  revalidate: 60,
-});
+const getCachedUser = unstable_cache(
+  async (id) => getUser(id),
+  ["my-app-user"],
+  {
+    tags: ["users"],
+    revalidate: 60,
+  }
+);
 
-export default async function Page({ params }: { params: Promise<{ id: string }> }) {
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
   const { id } = await params;
   const user = await getCachedUser(id);
   return <div>{user.name}</div>;
@@ -370,7 +378,11 @@ async function getCachedUser(id: string) {
   return getUser(id);
 }
 
-export default async function Page({ params }: { params: Promise<{ id: string }> }) {
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
   const { id } = await params;
   const user = await getCachedUser(id);
   return <div>{user.name}</div>;

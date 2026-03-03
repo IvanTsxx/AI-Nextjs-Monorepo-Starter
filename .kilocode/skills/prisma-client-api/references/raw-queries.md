@@ -52,7 +52,10 @@ const users = await prisma.$queryRaw(query);
 ```typescript
 import { Prisma } from "../generated/client";
 
-const conditions = [Prisma.sql`role = ${"ADMIN"}`, Prisma.sql`verified = ${true}`];
+const conditions = [
+  Prisma.sql`role = ${"ADMIN"}`,
+  Prisma.sql`verified = ${true}`,
+];
 
 const users = await prisma.$queryRaw`
   SELECT * FROM "User" 
@@ -95,7 +98,10 @@ For fully dynamic queries (use with caution!):
 ```typescript
 // ⚠️ SQL injection risk - only use with trusted input
 const table = "User";
-const users = await prisma.$queryRawUnsafe(`SELECT * FROM "${table}" WHERE id = $1`, userId);
+const users = await prisma.$queryRawUnsafe(
+  `SELECT * FROM "${table}" WHERE id = $1`,
+  userId
+);
 ```
 
 ### Parameterized unsafe query
@@ -104,7 +110,7 @@ const users = await prisma.$queryRawUnsafe(`SELECT * FROM "${table}" WHERE id = 
 const result = await prisma.$executeRawUnsafe(
   'UPDATE "User" SET name = $1 WHERE id = $2',
   "Alice",
-  1,
+  1
 );
 ```
 
@@ -125,7 +131,9 @@ const users = await prisma.$queryRaw`
 ```typescript
 // ❌ SQL injection vulnerability!
 const email = userInput;
-const users = await prisma.$queryRawUnsafe(`SELECT * FROM "User" WHERE email = '${email}'`);
+const users = await prisma.$queryRawUnsafe(
+  `SELECT * FROM "User" WHERE email = '${email}'`
+);
 ```
 
 ## Database-Specific Features

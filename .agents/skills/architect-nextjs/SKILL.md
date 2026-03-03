@@ -19,7 +19,7 @@ This skill establishes the architectural foundation for scalable Next.js applica
 
 ### 2. Screaming Architecture
 
-Directory structures must immediately declare *what* the application does.
+Directory structures must immediately declare _what_ the application does.
 
 - Use **Route Groups** `(feature)` for top-level modules.
 - Avoid generic folders like `containers` or `views` at the top level.
@@ -35,13 +35,13 @@ Directory structures must immediately declare *what* the application does.
 When placing files, follow this decision tree:
 
 1. **Count Usage**:
-    - **Used by 1 Feature**: Place in `app/(feature)/_components/`.
-    - **Used by 2+ Features**: Place in `src/shared/components/`.
+   - **Used by 1 Feature**: Place in `app/(feature)/_components/`.
+   - **Used by 2+ Features**: Place in `src/shared/components/`.
 
 2. **Determine Type**:
-    - **Server Component**: Default. Used for static content and initial data fetching.
-    - **Client Component**: Use ONLY for `useState`, `useEffect`, or event listeners.
-    - **Server Action**: Use for mutations and form handling. Place in `_actions/name.ts`.
+   - **Server Component**: Default. Used for static content and initial data fetching.
+   - **Client Component**: Use ONLY for `useState`, `useEffect`, or event listeners.
+   - **Server Action**: Use for mutations and form handling. Place in `_actions/name.ts`.
 
 ## Implementation Guides
 
@@ -65,5 +65,5 @@ Before finalizing a structure or file creation:
 
 1. [ ] **Scope**: Is this used in >1 feature? If no, move to `_components`.
 2. [ ] **Server**: Is "use client" absolutely necessary? Can it be pushed down the tree?
-3. [ ] **Screaming**: Does the folder name describe *what* it does (e.g., `(invoices)` vs `pages`)?
+3. [ ] **Screaming**: Does the folder name describe _what_ it does (e.g., `(invoices)` vs `pages`)?
 4. [ ] **Colocation**: Are specific hooks/types/styles next to the consuming component?

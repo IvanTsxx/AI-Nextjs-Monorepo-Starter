@@ -72,7 +72,10 @@ export async function GET() {
 
 ```tsx
 // app/api/users/[id]/route.ts
-export async function GET(request: Request, { params }: { params: Promise<{ id: string }> }) {
+export async function GET(
+  request: Request,
+  { params }: { params: Promise<{ id: string }> }
+) {
   const { id } = await params;
   const user = await getUser(id);
 

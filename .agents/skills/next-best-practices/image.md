@@ -169,5 +169,11 @@ const cloudinaryLoader = ({ src, width, quality }) => {
   return `https://res.cloudinary.com/demo/image/upload/w_${width},q_${quality || 75}/${src}`;
 };
 
-<Image loader={cloudinaryLoader} src="sample.jpg" alt="Sample" width={800} height={400} />;
+<Image
+  loader={cloudinaryLoader}
+  src="sample.jpg"
+  alt="Sample"
+  width={800}
+  height={400}
+/>;
 ```

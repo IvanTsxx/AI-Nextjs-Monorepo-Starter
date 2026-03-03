@@ -1,4 +1,10 @@
-"use client";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  description:
+    "A modern Next.js stack with Better Auth, Prisma, PostgreSQL, and Ultracite.",
+  title: "Next.js App with Better Auth & Prisma",
+};
 
 const TITLE_TEXT = `
  ██████╗ ███████╗████████╗████████╗███████╗██████╗

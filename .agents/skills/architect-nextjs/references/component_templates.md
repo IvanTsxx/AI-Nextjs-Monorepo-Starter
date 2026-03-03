@@ -48,11 +48,11 @@ interface InteractiveWidgetProps {
 
 export function InteractiveWidget({ initialValue }: InteractiveWidgetProps) {
   const [count, setCount] = useState(initialValue);
-  
+
   return (
     <div className="p-4 border rounded">
       <p>Count: {count}</p>
-      <button 
+      <button
         onClick={() => setCount(c => c + 1)}
         className="px-4 py-2 bg-blue-500 text-white rounded"
       >
@@ -69,11 +69,11 @@ Use for form submissions and mutations. Keep actions co-located if specific to o
 
 ```typescript
 // src/app/(feature)/_actions/example.ts
-'use server';
+"use server";
 
-import { z } from 'zod'; // Recommended for validation
-import { revalidatePath } from 'next/cache';
-import { redirect } from 'next/navigation';
+import { z } from "zod"; // Recommended for validation
+import { revalidatePath } from "next/cache";
+import { redirect } from "next/navigation";
 // import { db } from '@/shared/lib/db'; // Example DB import
 
 const Schema = z.object({
@@ -84,19 +84,19 @@ const Schema = z.object({
 export async function createItem(formData: FormData) {
   // Convert FormData to object
   const customData = Object.fromEntries(formData);
-  
+
   // Validate input
   const validated = Schema.safeParse(customData);
-  
+
   if (!validated.success) {
     return { error: validated.error.flatten() };
   }
-  
+
   // Perform mutation
   // await db.item.create({ data: validated.data });
-  
+
   // Update cache and redirect
-  revalidatePath('/feature');
-  redirect('/feature');
+  revalidatePath("/feature");
+  redirect("/feature");
 }
 ```

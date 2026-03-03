@@ -122,7 +122,10 @@ where: {
 
 ```typescript
 where: {
-  OR: [{ email: { contains: "@gmail.com" } }, { email: { contains: "@prisma.io" } }];
+  OR: [
+    { email: { contains: "@gmail.com" } },
+    { email: { contains: "@prisma.io" } },
+  ];
 }
 ```
 

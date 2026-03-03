@@ -81,6 +81,8 @@ Scripts that modify DOM during hydration.
 import Script from "next/script";
 
 export default function Page() {
-  return <Script src="https://example.com/script.js" strategy="afterInteractive" />;
+  return (
+    <Script src="https://example.com/script.js" strategy="afterInteractive" />
+  );
 }
 ```

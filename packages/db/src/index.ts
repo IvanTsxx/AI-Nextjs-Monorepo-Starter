@@ -1,3 +1,4 @@
+// oxlint-disable import/no-relative-parent-imports
 import { env } from "@next-prisma-postgresql-better-auth-ultracite-skills-ruler-mcp/env/server";
 import { PrismaPg } from "@prisma/adapter-pg";
 

@@ -160,7 +160,7 @@ export default function Image() {
     >
       Hello World
     </div>,
-    { ...size },
+    { ...size }
   );
 }
 ```
@@ -199,7 +199,7 @@ export default async function Image({ params }: Props) {
       <div style={{ fontSize: 64, fontWeight: "bold" }}>{post.title}</div>
       <div style={{ marginTop: 24, opacity: 0.8 }}>{post.description}</div>
     </div>,
-    { ...size },
+    { ...size }
   );
 }
 ```
@@ -221,7 +221,7 @@ export default async function Image() {
       width: 1200,
       height: 630,
       fonts: [{ name: "Inter", data: fontData, style: "normal" }],
-    },
+    }
   );
 }
 ```
@@ -277,7 +277,11 @@ export async function generateSitemaps() {
   return [{ id: 0 }, { id: 1 }, { id: 2 }];
 }
 
-export default async function sitemap({ id }: { id: number }): Promise<MetadataRoute.Sitemap> {
+export default async function sitemap({
+  id,
+}: {
+  id: number;
+}): Promise<MetadataRoute.Sitemap> {
   const start = id * 50000;
   const end = start + 50000;
   const products = await getProducts(start, end);
