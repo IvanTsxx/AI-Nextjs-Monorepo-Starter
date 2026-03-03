@@ -1,6 +1,34 @@
 {
   "name": "next-prisma-postgresql-better-auth-ultracite-skills-ruler-mcp",
+  "version": "1.0.0",
   "private": true,
+  "description": "A modern, AI-first Next.js monorepo template with PostgreSQL, Prisma, Better-Auth, Ultracite, Turborepo, and native AI agent support (MCP & Skills).",
+  "keywords": [
+    "ai-agents",
+    "app-router",
+    "better-auth",
+    "bun",
+    "mcp",
+    "monorepo",
+    "nextjs",
+    "postgresql",
+    "prisma",
+    "shadcn",
+    "template",
+    "turborepo",
+    "typescript",
+    "ultracite"
+  ],
+  "homepage": "https://github.com/IvanTsxx/AI-Nextjs-Monorepo-Starter#readme",
+  "bugs": {
+    "url": "https://github.com/IvanTsxx/AI-Nextjs-Monorepo-Starter/issues"
+  },
+  "license": "MIT",
+  "author": "IvanTsxx",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IvanTsxx/AI-Nextjs-Monorepo-Starter.git"
+  },
   "workspaces": {
     "packages": [
       "apps/*",
