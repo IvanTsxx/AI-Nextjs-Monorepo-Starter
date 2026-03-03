@@ -14,7 +14,7 @@
   </p>
 
   <p>
-    <a href="./README.md">EN English</a> · <strong>🇪🇸 Español</strong>
+    <a href="./README.md">English</a> · <strong>Español</strong>
   </p>
 </div>
 
