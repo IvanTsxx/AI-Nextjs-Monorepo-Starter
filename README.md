@@ -62,6 +62,7 @@ It combines a curated set of modern tools into a single, coherent setup so you d
 | **[Ruler](https://github.com/intellectronica/ruler)**       | Centralized standards for agentic workspaces                    |
 | **[shadcn/ui](https://ui.shadcn.com/)**                     | Accessible, unstyled component library                          |
 | **[Zod](https://zod.dev/)**                                 | Schema validation for environment variables and forms           |
+| **[Husky](https://typicode.github.io/husky/)**              | Modern native git hooks for code quality checks                 |
 | **[Docker](https://www.docker.com/)**                       | Local PostgreSQL via Docker Compose                             |
 
 ---
@@ -254,7 +255,16 @@ bun run check-types   # TypeScript type-check across the monorepo
 bun run check         # Lint & format check (Ultracite)
 bun run fix           # Auto-fix lint & formatting issues (Ultracite)
 bun run ruler:apply   # Apply Ruler standards (local only)
+bun run prepare       # Set up Husky git hooks
 ```
+
+---
+
+## ⚓ Git Hooks
+
+This repository uses **Husky** to enforce code quality before every commit.
+
+- **Pre-commit:** Runs `lint-staged`, which executes `ultracite fix` on changed files to ensure all committed code is properly formatted and linted according to project standards.
 
 ---
 

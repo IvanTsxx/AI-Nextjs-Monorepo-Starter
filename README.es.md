@@ -62,6 +62,7 @@ Combina un conjunto curado de herramientas modernas en una configuración única
 | **[Ruler](https://github.com/intellectronica/ruler)**       | Estándares centralizados para entornos de trabajo basados en agentes |
 | **[shadcn/ui](https://ui.shadcn.com/)**                     | Biblioteca de componentes accesibles y sin estilos impuestos         |
 | **[Zod](https://zod.dev/)**                                 | Validación de esquemas para variables de entorno y formularios       |
+| **[Husky](https://typicode.github.io/husky/)**              | Git hooks modernos para comprobaciones de calidad de código          |
 | **[Docker](https://www.docker.com/)**                       | PostgreSQL local mediante Docker Compose                             |
 
 ---
@@ -254,7 +255,16 @@ bun run check-types   # Verificar tipos TypeScript en todo el monorepo
 bun run check         # Verificar linting y formateo (Ultracite)
 bun run fix           # Corregir automáticamente problemas de lint y formato
 bun run ruler:apply   # Aplicar estándares de Ruler (solo local)
+bun run prepare       # Configurar los git hooks de Husky
 ```
+
+---
+
+## ⚓ Git Hooks
+
+Este repositorio utiliza **Husky** para garantizar la calidad del código antes de cada commit.
+
+- **Pre-commit:** Ejecuta `lint-staged`, que a su vez ejecuta `ultracite fix` en los archivos modificados para asegurar que todo el código enviado esté correctamente formateado y validado según los estándares del proyecto.
 
 ---
 

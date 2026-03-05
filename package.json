@@ -32,7 +32,8 @@
     "db:down": "turbo -F @your-repo-name/db db:down",
     "check": "ultracite check",
     "fix": "ultracite fix",
-    "ruler:apply": "bunx @intellectronica/ruler@latest apply --local-only"
+    "ruler:apply": "bunx @intellectronica/ruler@latest apply --local-only",
+    "prepare": "husky"
   },
   "dependencies": {
     "@your-repo-name/env": "workspace:*",
@@ -42,11 +43,19 @@
   "devDependencies": {
     "@types/node": "^22.13.14",
     "@your-repo-name/config": "workspace:*",
-    "oxfmt": "latest",
-    "oxlint": "latest",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.3.2",
+    "oxfmt": "^0.36.0",
+    "oxlint": "^1.51.0",
+    "oxlint-tsgolint": "^0.16.0",
     "turbo": "^2.6.3",
     "typescript": "catalog:",
     "ultracite": "7.2.4"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,json,jsonc,css,scss,md,mdx}": [
+      "bun x ultracite fix"
+    ]
   },
   "packageManager": "bun@1.3.10"
 }
